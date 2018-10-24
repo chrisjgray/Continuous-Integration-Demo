@@ -59,7 +59,12 @@ jobs:
 
 
 
-      # Add Snyk Dependency Vulnerability Scanner
+      # Add Snyk Dependency Vulnerability Scanner Scanner
+      - run:
+          name: snyk test
+          command: |
+            . venv/bin/activate
+            snyk test
 
 
       - store_artifacts:
