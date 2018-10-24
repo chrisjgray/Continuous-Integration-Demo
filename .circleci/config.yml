@@ -51,6 +51,12 @@ jobs:
 
 
       # Add Linter
+      - run:
+          name: pycodestyle linter
+          command: |
+            . venv/bin/activate
+            pycodestyle --show-source --show-pep8 ./HelloWorld.py
+
 
 
       # Add Snyk Dependency Vulnerability Scanner
